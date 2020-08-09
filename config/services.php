@@ -31,9 +31,15 @@ return [
     ],
 
     'facebook' => [
-        'client_id' => '320824769288879',
-        'client_secret' => 'efdf09cfbecbb423088d25408833c56c',
-        'redirect' => 'http://www.rewow.com:8000/auth/facebook/callback'
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => 'http://localhost:8001/login/facebook/callback'
+    ],
+
+    'Google' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => 'http://localhost:8001/login/facebook/callback'
     ]
 
 ];
