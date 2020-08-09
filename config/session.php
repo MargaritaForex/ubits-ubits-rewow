@@ -155,7 +155,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', null),
+    'domain' => env('SESSION_DOMAIN', "http://www.rewow.com:8000"),
 
     /*
     |--------------------------------------------------------------------------

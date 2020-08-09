@@ -30,4 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'facebook' => [
+        'client_id' => '320824769288879',
+        'client_secret' => 'efdf09cfbecbb423088d25408833c56c',
+        'redirect' => 'http://www.rewow.com:8000/auth/facebook/callback'
+    ]
+
 ];
