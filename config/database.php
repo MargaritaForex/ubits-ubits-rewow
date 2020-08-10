@@ -48,7 +48,7 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'rewow'),
+            'database' => env('DB_DATABASE', 'evertec'),
             'username' => env('DB_USERNAME', 'sebas'),
             'password' => env('DB_PASSWORD', '123456'),
             'unix_socket' => env('DB_SOCKET', ''),

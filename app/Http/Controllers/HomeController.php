@@ -1,9 +1,10 @@
-<?php
+<?php namespace App\Http\Controllers;
 
-namespace App\Http\Controllers;
-
+use App\Pet;
+use App\Product;
 use App\User;
-use Laravel\Socialite\Facades\Socialite;
+use DB;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -22,15 +23,18 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        return view('home');
-    }
 
-    public function privacypolicy()
+    public function index(Request $request)
     {
-        var_dump("entro");
-        return view('privacypolicy/privacypolicy');
+        $value = $request->user()->authorizeRoles(['user', 'admin']);
+        $users = User::all();
+        $pets = Pet::all();
+        if ($value) {
+            return view('product/create_products', ['pets' => $pets]);
+        } else {
+            $products =  DB::table('products')->where('status', true)->paginate(4);
+            return view('customer/homeCustomer', ['products' => $products]);
+        }
     }
 
 }

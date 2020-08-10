@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,18 +17,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
-Route::get('/login', 'HomeController@index')->name('exit');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/customer/edit/{id}', 'CustomerController@edit')->name('customer.edit');
+Route::post('/customer/update/{id}', 'CustomerController@update')->name('customer.update');
+Route::get('/customer/back', 'CustomerController@back')->name('customer.back');
+Route::get('/customer/back', 'CustomerController@back')->name('customer.back');
+Route::get('/product/index', 'ProductController@index')->name('product');
+Route::get('/product/create', 'ProductController@create')->name('product.create');
+Route::post('/product/save',  'ProductController@save')->name('product.save');
+Route::get('/product/edit/{id}', 'ProductController@edit')->name('product.edit');
+Route::post('/product/update/{id}',  'ProductController@update')->name('product.update');
+Route::get('/product/search/{id}',  'ProductController@search')->name('product.search');
 Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider')->name('social.auth');
-
 Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
+Route::get('/privacy', 'HomeController@privacypolicy')->name('privacyPolicy');
 
-Route::get('/privacyPolicy', 'HomeController@privacypolicy')->name('privacyPolicy');
+
+
+
+
+
+
