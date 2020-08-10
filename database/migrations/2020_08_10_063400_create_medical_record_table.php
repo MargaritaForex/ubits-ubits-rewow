@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAppoimentPetsTable extends Migration
+class CreateMedicalRecordTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateAppoimentPetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('appoiment_pets', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('appoiment_id')->unsigned();
+        Schema::create('medicalRecord', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
             $table->integer('pet_id')->unsigned();
-            $table->dateTime('hour');
+            $table->integer('appoiment_id')->unsigned();
+            $table->dateTime("pivot_hour")->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateAppoimentPetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('appoiment_pets');
+        Schema::dropIfExists('medical_record');
     }
 }

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\PetInformation;
 use App\Product;
 use Illuminate\Http\Request;
 use DB;
+use App\Appoiment;
 use Illuminate\View\View;
 
 class ProductController extends Controller
@@ -17,8 +19,10 @@ class ProductController extends Controller
 
     public function index(Request $request)
     {
-        $products = Product::all();
-        return view('product', ["products" => $products]);
+        $appoinment = Appoiment::find(3);
+        $petInformation = PetInformation::find(3);
+        return view('product', ["petInformation" => $appoinment->petInformation],
+            ["appoinment" => $petInformation->appoinmets]);
     }
 
     public function create()

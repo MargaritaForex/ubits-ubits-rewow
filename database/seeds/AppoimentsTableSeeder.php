@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Appoiment;
+use App\PetInformation;
 
 class AppoimentsTableSeeder extends Seeder
 {
@@ -9,12 +11,29 @@ class AppoimentsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-        App\Appoiment::create(['name' => 'Corte de Pelo', 'appoiments_type_id' => 2]);
+    public function run(){
 
-        App\Appoiment::create(['name' => 'Consulta', 'appoiments_type_id' => 1]);
+        $pet_hercules = PetInformation::where('name', 'Hercules')->first();
+        $petJugosa = PetInformation::where('name', 'Jugosa')->first();
+        $petGustavo = PetInformation::where('name', 'gustavo')->first();
 
-        App\Appoiment::create(['name' => 'Vacuna', 'appoiments_type_id' => 1]);
+        $appoiment = new Appoiment();
+        $appoiment->name = 'Corte de Pelo';
+        $appoiment->appoiments_type_id = 2;
+        $appoiment->save();
+        $appoiment->petInformation()->attach($pet_hercules);
+
+        $appoiment = new Appoiment();
+        $appoiment->name = 'Consulta';
+        $appoiment->appoiments_type_id = 1;
+        $appoiment->save();
+        $appoiment->petInformation()->attach($petJugosa);
+
+        $appoiment = new Appoiment();
+        $appoiment->name = 'Vacuna';
+        $appoiment->appoiments_type_id = 1;
+        $appoiment->save();
+        $appoiment->petInformation()->attach($petGustavo);
+
     }
 }
