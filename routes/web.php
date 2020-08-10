@@ -21,12 +21,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/login', 'HomeController@index')->name('exit');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('login/facebook', 'Auth\LoginController@redirectToProvider')->name('social.auth');
+Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider')->name('social.auth');
 
-Route::get('login/facebook/callback/', 'Auth\LoginController@handleProviderCallback');
+Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
 
 Route::get('/privacyPolicy', 'HomeController@privacypolicy')->name('privacyPolicy');

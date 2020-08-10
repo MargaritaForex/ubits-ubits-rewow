@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\User;
+use Laravel\Socialite\Facades\Socialite;
 
 class HomeController extends Controller
 {
@@ -31,7 +32,5 @@ class HomeController extends Controller
         var_dump("entro");
         return view('privacypolicy/privacypolicy');
     }
-
-
 
 }

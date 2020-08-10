@@ -15,7 +15,7 @@
                     </div>
                     <br>
                     <div class="col-md-12">
-                        <a href="#" class="fa fa-google">
+                        <a  href="{{ route('social.auth', 'google') }}" class="fa fa-google">
                             Google
                         </a>
                     </div>

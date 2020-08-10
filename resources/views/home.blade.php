@@ -5,18 +5,19 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="panel panel-default">
-
+                    <div class="panel-heading">{{ Auth::user()->name }}</div>
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-8">
                                 <p>Nombre:</p>
-                                {{ $user->name}}
+                                <p><strong>{{ Auth::user()->name }}</strong></p>
                                 <hr>
                                 <p>Email:</p>
-                                {{ $user->email}}
+                                <p><strong>{{ Auth::user()->email }}</strong></p>
                             </div>
                             <div class="col-md-4">
-                                 </div>
+                                <img src="{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}" class="img-responsive img-thumbnail">
+                            </div>
                         </div>
                     </div>
                 </div>
