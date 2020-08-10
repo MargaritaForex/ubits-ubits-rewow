@@ -35,5 +35,11 @@ class AppoimentsTableSeeder extends Seeder
         $appoiment->save();
         $appoiment->petInformation()->attach($petGustavo);
 
+        $appoiment = new Appoiment();
+        $appoiment->name = 'Vacuna';
+        $appoiment->appoiments_type_id = 1;
+        $appoiment->save();
+        $appoiment->petInformation()->attach($petGustavo);
+
     }
 }

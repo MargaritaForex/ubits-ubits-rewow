@@ -31,18 +31,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dfbcc05-a8da-4cde-9a5a-e3afa0f050f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ubits-ubits-rewow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ubits-ubits-rewow.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Appoiment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Appoiment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppoimentPets.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/PetInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/PetInformation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_10_040620_create_appoiment_pets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/AppoimentPetsTableSeeder.php" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/products.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/AppoimentsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/AppoimentsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PetInformationTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PetInformationTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sideMenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sideMenu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +42,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -58,6 +50,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -178,6 +171,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -195,6 +189,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597035708659</updated>
       <workItem from="1597035710096" duration="16943000" />
+      <workItem from="1597055962440" duration="3722000" />
     </task>
     <servers />
   </component>
@@ -211,6 +206,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1320" height="174" key="GridCell.Tab.0.bottom" timestamp="1597036665986">
@@ -233,9 +229,9 @@
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
     <state x="1471" y="0" width="929" height="581" key="dock-window-1/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1597043701077" />
-    <state x="1397" y="0" width="929" height="496" key="dock-window-2" timestamp="1597043701078">
+    <state x="1397" y="0" width="929" height="496" maximized="true" key="dock-window-2" timestamp="1597056261042">
       <screen x="1366" y="0" width="1366" height="768" />
     </state>
-    <state x="1397" y="0" width="929" height="496" key="dock-window-2/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1597043701078" />
+    <state x="1397" y="0" width="929" height="496" maximized="true" key="dock-window-2/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1597056261042" />
   </component>
 </project>

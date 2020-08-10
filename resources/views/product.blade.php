@@ -1,71 +1,61 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-3 "  style="background-color:yellow;">
-                    <p>REWOW</p>
+                <div class="col-sm-3 " style="background-color:yellow;">
+                    <div class="row">
+                        <div class="col-sm-12" style="background-color:#7AC943">
+                            <a class="nav-link" href="{{ route('product') }}">
+                                <i class="mdi mdi-compass-outline menu-icon"></i>
+                                <span class="menu-title"> Historia</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-12" style="background-color:#FCF9F9">
+                            <a class="nav-link" href="{{ route('product') }}">
+                                <i class="mdi mdi-compass-outline menu-icon"></i>
+                                <span class="menu-title"> Citas</span>
+                            </a>
+                        </div>
+                        <div class="col-sm-12" style="background-color:#FCF9F9">
+                            <a class="nav-link" href="{{ route('product') }}">
+                                <i class="mdi mdi-compass-outline menu-icon"></i>
+                                <span class="menu-title"> Tienda</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-sm-1" style="background-color:gray;">
-
-                </div>
-                <div class="col-sm-8" style="background-color:pink;">
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-3" style="background-color:white;">
-                    <p>HISTORIA</p>
+                <div class="col-sm-1" style="background-color:#D4D4D4;">
                 </div>
 
-                <div class="col-sm-1" style="background-color:gray;">
-
-                </div>
-                <div class="col-sm-8" style="background-color:pink;">
-
-                </div>
-            </div>
-        </div>
-
-        <form action="{{ route('product.search', 0) }}" method="GET" class="form-horizontal">
-            {{ csrf_field() }}
-            <div class="row ">
-                <div class="col-md-6 offset-4">
-                    <a href="{{ route('product.create') }}" class="btn btn-primary "> Nueva Cita </a>
-                </div>
-            </div>
-        </form>
-        <div class="row">
-
-            <div class="col-md-4">
-                <div class="card-body">
-                <table class="table mt-3">
-                    <tbody>
-                    <tr>
+                <div class="col-sm-4" class="border">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <a href="{{ route('product.create') }}" class="btn btn-primary btn-lg btn-block"> Nueva
+                                Cita </a>
+                        </div>
                         @foreach ($appoinment as $product)
-                            <td>
-                                {{ $product->name}} <br>
+                            <div class="col-sm-12">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        {{ $product->name}}
+                                        @foreach ($petInformation as $product)
+                                            {{ $product->name}}
+                                           @break
+                                        @endforeach
+                                        @endforeach
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                        @endforeach
+                    </div>
+                </div>
 
-                        @foreach ($petInformation as $product)
-                            {{ $product->name}}
-                            </td>
-                        @endforeach
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="col-sm-4" class="border">
                 </div>
             </div>
-            <div class="col-md-8 offset-2">
-            </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 offset-2">
-            </div>
-        </div>
-    </div>
 @endsection
